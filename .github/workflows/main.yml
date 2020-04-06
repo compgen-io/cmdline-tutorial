@@ -25,9 +25,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Setup venv/
       run: |
-        python3 -m venv venv
-        venv/bin/pip install -r requirements.txt
+        pip install -r requirements.txt
 
     # Runs a set of commands using the runners shell
     - name: Build site
-      run: venv/bin/mkdocs build
+      run: mkdocs build
