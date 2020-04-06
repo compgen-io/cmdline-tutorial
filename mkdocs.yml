@@ -1,0 +1,50 @@
+site_name: Command-line tutorials
+site_url: https://code.breese.dev/testing/
+repo_url: "https://github.com/mbreese/commandline-tutorials"
+
+theme:
+    name: null
+    custom_dir: 'cinder/cinder'
+        #  name: bootstrap4
+#  name: material
+#  palette:
+#    primary: 'blue grey'
+#    accent: 'light blue'
+#  font:
+#    text: 'Helvetica'
+#    code: 'Menlo'
+nav:
+       - Command-line:
+          - Welcome: 'index.md'
+          - 'Terminal / SSH': 'cmd/terminal.md'
+          - 'Common commands': 'cmd/common.md'
+          - 'Customizing the shell': 'cmd/customizing.md'
+          - 'Data pipelines': 'cmd/02-Data_Processing.md'
+
+       - Git: 'git/index.md'
+       - Cluster jobs: 'cluster/index.md'
+
+markdown_extensions:
+  - toc:
+          permalink: []
+  - admonition
+  - codehilite
+  - footnotes
+  - attr_list
+  - smarty
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
