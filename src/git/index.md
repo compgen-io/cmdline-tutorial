@@ -1,3 +1,0 @@
-# Git source control
-
-TODO
