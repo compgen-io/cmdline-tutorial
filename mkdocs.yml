@@ -1,6 +1,6 @@
 site_name: Command-line tutorials
 #site_url: https://code.breese.dev/testing/
-repo_url: "https://github.com/compgen-io/cmdline-tutorials"
+repo_url: "https://github.com/compgen-io/cmdline-tutorial"
 
 theme:
     name: null
