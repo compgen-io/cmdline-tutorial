@@ -16,7 +16,9 @@ nav:
        - Command-line:
           - Welcome: 'index.md'
           - 'Terminal / SSH': 'cmd/terminal.md'
+          - 'Unix concepts': 'cmd/concepts.md'
           - 'Common commands': 'cmd/common.md'
+          - 'Tranferring data': 'cmd/transfer.md'
           - 'Customizing the shell': 'cmd/customizing.md'
           - 'Data pipelines': 'cmd/02-Data_Processing.md'
           - 'Links': 'cmd/otherlinks.md'

@@ -1,13 +1,16 @@
 <h1>Common commands</h1>
 
-The command-line consists of a command-prompt and then output from the command.
+The command-line consists of a command-prompt and then output from the command. These are some of the more common commands you'll use when trying to navigate and work with a Unix/Linux server.
 
+Before you use these though, you should make sure that you understand some of these [Unix concepts](concepts.md).
 
 ## Navigating the file system
 
 Listing files in the current directory is performed using the `ls` command.
 `ls` has many options. By default, the sort order of the files is alphabetical, with capital letters first, then lowercase letters (A-Za-z).
 A few of the more common arguments are listed below.
+
+### Listing files
 
 Listing files in the current directory
 
@@ -23,10 +26,33 @@ Listing the long version... `ls -l`
     -rw-r--r--  1 mbreese  staff  0 Mar 31 16:31 file3
     -rw-r--r--  1 mbreese  staff  0 Mar 31 16:31 file4
 
-    (permissions)
-                (links)                          (filename)
-                  (owner)  (group)  (Modified date)
-                                  (size in bytes)
+What does all of this mean? Let's look at each column...
+
+* Permissions  
+    This is probably the most foreign of the fields above. 
+
+    The first character shows if the file is a file or a directory. If this is a directory (see below for an example), then this character will be a `d`. Otherwise, it is a hyphen `-`.
+
+    Next, the fields shows the access level that that each user on the system has to this file. There are 3 main types of permissions:
+
+    * **r** - read  *(can the user read the file?)*
+    * **w** - write  *(can the user write to the file?)*
+    * **x** - execute  *(can the user run this as a program?)*
+
+    These values are shown in three sets of triplets. The first triplet shows the user (*u*) permissions. This shows the permissions for the *owner*. The next is the group (*g*) permissions. Finally the permissions for all other users (*o*). We'll cover [how to set and change these permissions](#file-permissions) further down, but for now, you just need to know that this is what the `rwx` stand for.
+
+* Links  
+    This is the number of references to this file in the filesystem. This will almost always be 1, and can be safely ignored for now.
+
+* Owner  
+    This is the username for the user who is listed as the owner of this file. By default they are the user that can set the permissions for other users.
+
+* Group  
+    This is the group that is the group owner for a file. Users can belong to more than one group, which makes this a good mechanism for sharing data with others.
+
+* Size
+* Modified date
+* Filename
 
 
 Listing all files (including hidden files). Any file that starts with a `'.'` will be hidden by default. Many programs will write to files that start with a `'.'` to save configuration or temporary data. All directories
@@ -55,12 +81,9 @@ Here are some other `ls` options:
 | -r | reverse the sort (z-aZ-A or oldest to newest) |
 | -R | recursively display files (display this directory, and all sub-directories)
 
+### Changing directories
 
-Creating a directory
-
-    $ mkdir new_directory
-
-Changing directories
+Changing to a new directory
 
     $ cd new_directory
 
@@ -69,6 +92,30 @@ Changing to the parent directory (up a level)
     $ cd ..
 
 *"`..`" is one of those hidden files, but it is present in every directory, and it always means the parent directory*
+
+
+Changing to the root directory (this is the highest level)  
+
+    $ cd /
+
+
+Changing to your home directory (any of these work)
+
+    $ cd
+    $ cd ~
+    $ cd $HOME
+
+### Absolute vs relative pathnames
+
+
+
+## Working with files and directories  { #markdown data-toc-label='Files and directories' }
+
+### Directories
+
+Creating a directory
+
+    $ mkdir new_directory
 
 Removing a directory
 
@@ -80,6 +127,14 @@ Removing a directory
         $ rm -r bad_directory_with_files
 
     But be careful -- one wrong finger and you could delete months worth of work. It's always better to test things out first, before running `rm -r`.
+
+### Files
+
+    cp src dest
+    mv srv dest
+    rm file
+
+### Permissions
 
 ## File streams
 
