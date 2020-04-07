@@ -1,17 +1,6 @@
-<style>
-.bs-sidebar{
-  display: none;
-  width: 0;
-}
-.col-md-3 {
-width: 0;
-}
-.col-md-9 {
-margin-left: auto;
-margin-right: auto;
-float:none;
-}
-</style>
+---
+disable_toc: true
+---
 
 # Welcome to the command-line { #markdown data-toc-label='Welcome' }
 
