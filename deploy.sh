@@ -1,4 +1,7 @@
 #!/bin/bash
+if [ ! -e venv ]; then
+    ./install.sh
+fi
 venv/bin/mkdocs build
 cd site
 git init
