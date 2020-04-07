@@ -19,6 +19,7 @@ nav:
           - 'Common commands': 'cmd/common.md'
           - 'Customizing the shell': 'cmd/customizing.md'
           - 'Data pipelines': 'cmd/02-Data_Processing.md'
+          - 'Links': 'cmd/otherlinks.md'
 
        - Git: 'git/index.md'
        - Cluster jobs: 'clusters/index.md'
@@ -26,6 +27,7 @@ nav:
 markdown_extensions:
   - toc:
           permalink: []
+          toc_depth: "1-3"
   - admonition
   - codehilite
   - footnotes
