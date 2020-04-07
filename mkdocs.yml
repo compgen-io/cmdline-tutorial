@@ -22,7 +22,7 @@ nav:
           - 'Data pipelines': 'cmd/02-Data_Processing.md'
 
        - Git: 'git/index.md'
-       - Cluster jobs: 'cluster/index.md'
+       - Cluster jobs: 'clusters/index.md'
 
 markdown_extensions:
   - toc:
@@ -48,3 +48,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+plugins:
+    - search:
+        prebuilt_index: 'python'
