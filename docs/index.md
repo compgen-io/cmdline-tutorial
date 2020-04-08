@@ -10,8 +10,14 @@ Learning to use the command-line can make almost any data analysis task easier.
 
 ### Getting started with the command-line
 
+* [Unix concepts](cmd/concepts.md)
 * [Terminal and Connecting to remote servers](cmd/terminal.md)
 * [Common commands](cmd/common.md)
+* [Tranferring data](cmd/transfer.md)
+* [Customizing the shell](cmd/customizing.md)
+* [Writing scripts](cmd/scripts.md)
+* [Data pipelines](cmd/02-Data_Processing.md)
+* [Other links](cmd/otherlinks.md)
 
 ### Version control with `git`
 

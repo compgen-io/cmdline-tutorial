@@ -107,7 +107,7 @@ Changing to your home directory (any of these work)
 
 ### Absolute vs relative pathnames
 
-
+*Work in progress*
 
 ## Working with files and directories  { #markdown data-toc-label='Files and directories' }
 

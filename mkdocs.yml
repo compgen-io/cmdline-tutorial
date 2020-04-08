@@ -4,6 +4,9 @@ repo_url: "https://github.com/compgen-io/cmdline-tutorial"
 theme:
     name: null
     custom_dir: 'cinder/cinder'
+extra_css:
+  - "css/style.css"
+
         #  name: bootstrap4
 #  name: material
 #  palette:
@@ -15,11 +18,12 @@ theme:
 nav:
        - Command-line:
           - Welcome: 'index.md'
-          - 'Terminal / SSH': 'cmd/terminal.md'
           - 'Unix concepts': 'cmd/concepts.md'
+          - 'Terminal / SSH': 'cmd/terminal.md'
           - 'Common commands': 'cmd/common.md'
           - 'Tranferring data': 'cmd/transfer.md'
           - 'Customizing the shell': 'cmd/customizing.md'
+          - 'Writing scripts': 'cmd/scripts.md'
           - 'Data pipelines': 'cmd/02-Data_Processing.md'
           - 'Links': 'cmd/otherlinks.md'
 

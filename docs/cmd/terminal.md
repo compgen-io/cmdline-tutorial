@@ -54,9 +54,23 @@ The SSH program is quite powerful, and can be used to do many other things, such
     
 Using SSH on a Windows computer requires a GUI client[^1].
 
+#### Putty
+
 One SSH client that I've used in the past is: [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/). This is one of the most commonly used Windows SSH clients, and will support any of the commands that we will discuss in this tutorial.
 
 ![PuTTY](img/putty.png)
+
+https://www.chiark.greenend.org.uk/~sgtatham/putty/
+
+#### MobaXterm
+
+Another recommended option is MobaXterm, which is a more full-featured program that includes support for tabbed connections and X11 graphics.
+
+![MobaXterm](img/feature-terminal.png)
+
+
+https://mobaxterm.mobatek.net/
+
 
 [^1]: Again, I'm intentionally ignoring things like WSL and Cygwin.
 
