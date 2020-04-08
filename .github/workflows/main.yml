@@ -27,3 +27,18 @@ jobs:
     - name: Build site
       run: |
         ./deploy.sh ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Deploy parent repo
+      run: |
+        curl --request POST \
+        --url https://api.github.com/repos/compgen-io/compgen-io-docs/dispatches \
+        --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+        --header 'content-type: application/json' \
+        --data '{
+          "event_type": "auto-deploy",
+          "client_payload": {
+              "src_repo": "${{ github.repository }}""
+            }
+          }'
+
+        
