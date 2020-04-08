@@ -5,6 +5,8 @@ fi
 venv/bin/mkdocs build
 cd site
 git init
+git config user.email "noreply@compgen.io"
+git config user.name "Deployment/$GITHUB_ACTOR"
 git add .
 git commit -m 'deploy'
 git remote add origin git@github.com:compgen-io/cmdline-tutorial.git
