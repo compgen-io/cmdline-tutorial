@@ -34,7 +34,7 @@ jobs:
         --url https://${{secrets.DEPLOY_USERNAME}}:${{secrets.DEPLOY_TOKEN}}@api.github.com/repos/compgen-io/compgen-io-docs/dispatches \
         --header 'content-type: application/json' \
         --data '{
-          "event_type": "auto-deploy",
+          "event_type": "docs-deploy",
           "client_payload": {
               "src_repo": "${{ github.repository }}"
             }
