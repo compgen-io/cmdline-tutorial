@@ -9,7 +9,11 @@ git config user.email "noreply@compgen.io"
 git config user.name "Deployment/$GITHUB_ACTOR"
 git add .
 git commit -m 'deploy'
-git remote add origin https://github.com/compgen-io/cmdline-tutorial.git
+if [ $1 != "" ]; then
+    git remote add origin https://deploy:$1@github.com/compgen-io/cmdline-tutorial.git
+else
+    git remote add origin https://github.com/compgen-io/cmdline-tutorial.git
+fi
 git checkout -b gh-pages
 git push --force origin gh-pages
 cd ..

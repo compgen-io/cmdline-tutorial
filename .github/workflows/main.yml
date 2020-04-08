@@ -26,4 +26,4 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Build site
       run: |
-        ./deploy.sh
+        ./deploy.sh ${{ secrets.GITHUB_TOKEN }}
