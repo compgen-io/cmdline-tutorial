@@ -1,5 +1,6 @@
 # Customizing your shell
 
+
 If you're using the `bash` shell (and this is the default on many systems), 
 then you can edit the file `$HOME/.bashrc` to customize your shell.
 
