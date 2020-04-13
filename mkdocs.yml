@@ -1,11 +1,14 @@
 site_name: Command-line tutorial&nbsp;&nbsp;
 repo_url: "https://github.com/compgen-io/cmdline-tutorial"
+pdf_url: "pdf/cmdline-tutorial.pdf"
 
 theme:
     name: null
     custom_dir: 'cinder/cinder'
 extra_css:
   - "css/style.css"
+
+# theme: material
 
         #  name: bootstrap4
 #  name: material
@@ -59,3 +62,10 @@ markdown_extensions:
 plugins:
     - search:
         prebuilt_index: 'python'
+        #    - pdf-export:
+        #verbose: true
+        #combined: true
+        #media_type: print
+        #enabled_if_env: ENABLE_PDF_EXPORT
+        #combined_output_path: pdf/cmdline-tutorial.pdf
+

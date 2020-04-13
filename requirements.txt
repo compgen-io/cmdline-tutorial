@@ -1,3 +1,4 @@
 mkdocs
 pygments
 pymdown-extensions
+mkdocs-pdf-export-plugin

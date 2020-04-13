@@ -1,3 +1,16 @@
+@media print {
+
+body {
+	font-size: 11px;
+}
+pre>code {
+    font-size: 10px;
+}
+.bs-sidenav {
+    font-size: 10px;
+}
+
+}
 .navbar-logo {
     font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     float: left;
