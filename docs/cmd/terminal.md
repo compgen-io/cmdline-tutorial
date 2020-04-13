@@ -13,6 +13,12 @@ To open a terminal session on a Mac, you will need to run the `Terminal` applica
 
 ![Terminal](img/mac-terminal.png)
 
+#### Disconnecting
+
+When you are done with your session and want to cleanly exit, run the `exit` command. This will close this terminal session. The window may still appear, but it can be safely closed. 
+
+Alternatively, you could also quit the program entirely with `⌘-q`. This will only work if there aren't other programs still running.
+
 ### Windows
 
 Windows, doesn't have a good default terminal available. Because of this, you will need to skip ahead to the [Remote server (SSH)](#remote-server-ssh) section.
@@ -73,6 +79,13 @@ https://mobaxterm.mobatek.net/
 
 
 [^1]: Again, I'm intentionally ignoring things like WSL and Cygwin.
+
+## Disconnecting
+
+When you are done with your session and want to cleanly exit, again you can run the `exit` command. This will close the connection to the remote server.
+
+This will only work if there aren't background jobs running on the server. If you get a message about "suspended jobs", check the section on [process control](common.md#process-control).
+
 
 ## Authentication
 

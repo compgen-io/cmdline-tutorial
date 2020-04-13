@@ -10,12 +10,16 @@ Linux and Unix in general is built upon a few key concepts. Knowing these concep
 ## File system
 
 
+!!! note Bits and bytes and kilobytes, etc..
+
 
 ## Shell
 
 The shell is the program that you are interacting with on the command-line. It is responsible for reading your commands and then figuring out how to execute them. 
 
 For more information about shells and how to change them to suit your needs, check out [customizing your shell](customizing.md).
+
+### Scripts
 
 
 ## Input/Output streams

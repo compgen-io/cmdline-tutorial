@@ -4,6 +4,45 @@ The command-line consists of a command-prompt and then output from the command. 
 
 Before you use these though, you should make sure that you understand some of these [Unix concepts](concepts.md).
 
+!!! note
+	Below, when you see a `$`, this is a command-prompt. This is where you'd type an instruction on the command line for the computer to do. This is a simple prompt and yours will probably look a little more complicated. In fact, it may look more like this:
+
+	    username@server:~$
+
+	The only difference between the two forms is that the later includes a little more information (and how to change yours is covered in the [customization](customizing.md#prompt) section). The key thing to know is that anything after the `$` is where you type. In order to execute the command, hit the `return ↵`  or `enter ↵`  key.
+
+## Tips and tricks
+
+### History
+
+When you are typing commands, you will often want to repeat or edit an earlier command. In most shells, you can browse your earlier commands by using your `up ↑` and `down ↓`  arrow keys. You can then move the cursor left and right to edit your command as necessary.
+
+!!! note
+	Your entire command history is stored for you in either `$HOME/.bash_history` or `$HOME/.zsh_history`, depending on the shell you are using (see [customizing](customization.md) for more information).
+
+### Tab completion
+
+There are many times when you want to do something to a specific file, but don't want to type a full name. In this case, you can often use `tab ⇥` completion. If you type the first few letters of a file, you can hit the `tab ⇥` key and the shell will finish the rest of the name or command for you. If there is any ambiguity in a name, the shell will complete as much of the name for you as it can. This is a handy shortcut that can save you a lot of typing.
+
+### File globs
+
+Another way to save some time is to use a file glob instead of typing a full filename. For example, if you have a bunch of text files (all ending in `.txt`) that you wanted to copy to a new directory (`dest`), you could type all of the file names one-by-one, or you could use a file glob. A glob is a wildcard character that allow for quick pattern matching when entering filenames.
+
+So, in the above example, instead of typing this following:
+
+    $ cp a.txt b.txt c.txt d.txt ... dest/
+
+You could type this:
+
+    $ cp *.txt dest/
+
+
+There are two globs you can use: 
+
+* `*` means zero or more of any character. This can be a bit deceiving, because it will also match "zero" wildcard characters. So be careful!
+* `?` means one (and only one) wildcard character.
+
+
 ## Navigating the file system
 
 Listing files in the current directory is performed using the `ls` command.
@@ -111,6 +150,12 @@ Changing to your home directory (any of these work)
 
 ## Working with files and directories  { #markdown data-toc-label='Files and directories' }
 
+Print your current working directory
+
+	$ pwd
+	/home/username
+
+
 ### Directories
 
 Creating a directory
@@ -140,6 +185,8 @@ Removing a directory
 
 ## Pipes
 
+## Process control
+
 ## Miscellaneous commands
 
 
@@ -167,104 +214,28 @@ What is your username?
     my_username
 
 
+Write something to the screen
 
-Writes the phrase "Hello World" to the terminal
+	$ echo "Hello"
+	Hello
 
+You can also write variables, like $SHELL
 
-	echo "Hello World"
-	echo "a;lksdjfl;aksdjf;lkjsdf"
-	echo "world"
-	pwd
-	ls
-	ls
-	ls -l
-	mkdir new_dir
-	ls -l
-	cd new_dir
-	ls -l
-	ls -las
-	ls -l .
-	ls -la .
-	ls -la ..
-	ls -l ..
-	ls -la
-	cd ..
-	ls -l
-	cd new_dir
-	date
-	echo "hello"
-	echo "hello" > file.txt
-	cat file.txt
-	echo " world" > file2.txt
-	cat file.txt file2.txt
-	cat file.txt file2.txt > file3.txt
-	cat file3.txt
-	cat file2.txt
-	echo "world" > file2.txt
-	cat file2.txt
-	cat file.txt file2.txt 
-	cat file3.txt
-	md5
-	echo "hello"
-	echo "hello" | md5
+	$ echo "$SHELL"
+	/bin/bash
+
+Or put them together into one line...
+
+	$ echo "My shell is: $SHELL"
+	My shell is /bin/bash
+
+Calculate an MD5 hash of a file
+
 	md5 file.txt
-	echo "hello" | md5
-	echo "hello1" | md5
-	echo "hello" | md5
-	echo "hell0" | md5
-	echo "hell0" | base64
-	ls /
-	ls -l
-	pwd
-	ls ~
-	ls ~ -l
-	ls -l ~
-	ls -l ~ | tail -n 5
-	ls -l ~ | head -n 5
-	ls -l ~ | less
-	ls -l ~ | less
-	ls 
-	ls -l 
-	ls -l  
-	ls -l   | grep file2
-	ls -l   | grep file
-	echo "my stdout" | cat
-	cat *
-	grep world file2.txt
-	grep world file3.txt
-	grep
-	grep world *
-	cat * | grep world
-	grep world
-	grep world *
-	mkdir sub_dir
-	echo "this is another file with the word world in it" > sub_dir/newfile.txt
-	cat sub_dir/newfile.txt
-	grep world *
-	grep -R world *
-	curl
-	curl --head --silent google.com
-	curl --head --silent google.com | grep Location
-	curl google.com
-	curl -L google.com
-	curl -L google.com | less
-	ssh asclab-c1
-	curl asclab.ucsf.edu/test.csv
-	curl -L asclab.ucsf.edu/test.csv
-	curl -L asclab.ucsf.edu/test.csv
-	clear
-	curl -L asclab.ucsf.edu/test.csv
-	curl -L asclab.ucsf.edu/test.csv | less 
-	curl -L asclab.ucsf.edu/test.csv | less -S 
-	curl -L asclab.ucsf.edu/test.csv | grep MYC
-	curl -L asclab.ucsf.edu/test.csv | grep -w MYC
-	curl -L asclab.ucsf.edu/test.csv | grep -w '^MYC'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -w '^MYC'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -w 'ABL'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -w 'ABL1'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -w 'abl1'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -wI 'ABL1'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -wI 'abl1'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -wi 'abl1'
-	curl -L --silent asclab.ucsf.edu/test.csv | grep -wi 'abl1' | less -S
-	ssh asclab-c1.ucsf.edu
+
+!!! note 
+	This is useful when comparing two files to see if something changed or a file you've downloaded from a remote server.  `MD5` is an algorithm that takes in a set of data (bytes) and generates a signature. This signature is a fixed size, but will be very different between two different inputs. The algorithm is designed so that any change in the input (as small as one bit) will result in a large difference in the signature.
+
+    `SHA1` is another algorithm that is commonly used for this purpose.
+
+    These are a family of algorithms called one-way hashes. You feed data in one way and get a hash signature out the other. However, there no going the other way -- you can't (easily) feed in a signature and recover what bits were used to generate that signature.
