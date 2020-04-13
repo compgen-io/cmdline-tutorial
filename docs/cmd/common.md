@@ -42,6 +42,7 @@ There are two globs you can use:
 * `*` means zero or more of any character. This can be a bit deceiving, because it will also match "zero" wildcard characters. So be careful!
 * `?` means one (and only one) wildcard character.
 
+!!! danger Typos with file globs can lead to deletion of all of your files if you aren't careful! There is a big difference between `rm *txt` and `rm * txt`.  The first deletes all text files. The second deletes **all** files and the file named `txt`.
 
 ## Navigating the file system
 
