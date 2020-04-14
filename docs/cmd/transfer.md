@@ -85,4 +85,6 @@ In this example, the file you want to download is located at this URL: `https://
 
 ## Cloud file sync services
 
-It is possible to use cloud sync services like Dropbox or Box.net with a Linux server, but it can be *very* complicated to setup. For some enterprise customers these services will sometimes enable an FTP gateway, which lets users upload and download files using an FTP client. However this is not a common setup and not available to everyone. There are also some command-line tools available that will upload and download files from cloud services. One example is from the Cyberduck group called [duck.sh](https://duck.sh/). For more information on this, see the [Cyberduck wiki](https://trac.cyberduck.io/wiki/help/en/howto/cli).
+It is possible to use cloud sync services like Dropbox or Box.net with a Linux server, but it can be *very* complicated to setup. For some enterprise customers these services will sometimes enable an FTP gateway, which lets users upload and download files using an FTP client. However this is not a common setup and not available to everyone.
+
+There are also some command-line tools available that will upload and download files from cloud services. One example is from the Cyberduck group called [duck.sh](https://duck.sh/). For more information on this, see the [Cyberduck wiki](https://trac.cyberduck.io/wiki/help/en/howto/cli).
