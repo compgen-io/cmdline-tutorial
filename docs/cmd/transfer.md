@@ -76,4 +76,13 @@ There is also an option for data transfer when using an iPad or iPhone! You can 
 
 ## Downloading from websites
 
-	curl -L asclab.ucsf.edu/test.csv
+Another option you have to get data onto a server is to download it from a public web or FTP server. There are two primary tools that you can use at the command line to manage this: `curl` and `wget`. They are roughly equivalent for this purpose and pretty easy to use. The main benefit of using tools like this is that you have a great deal of visibility into the data transfer if/when things go wrong. For a simple download though, they are pretty easy to use. Below is an example of how to download a file using curl:
+
+
+	curl -LO https://example.com/test.dat
+
+In this example, the file you want to download is located at this URL: `https://example.com/test.dat`. The `-L` in the argument list tells curl to follow any redirection commands the server sends. Sometimes a server will redirect you to a different URL to download data. One common example is a redirection from a non-encrypted connection (HTTP) to an encrypted one (HTTPS). This is very common and happens transparently when you use a GUI web browser like Google Chrome or Firefox. Unfortunately, we have to explicitly tell curl to do the same. The `-O` argument tells curl to save the file as `test.dat` locally. By default, curl will send the data to [stdout](concepts.md#onputoutput-streams).
+
+## Cloud file sync services
+
+It is possible to use cloud sync services like Dropbox or Box.net with a Linux server, but it can be *very* complicated to setup. For some enterprise customers these services will sometimes enable an FTP gateway, which lets users upload and download files using an FTP client. However this is not a common setup and not available to everyone. There are also some command-line tools available that will upload and download files from cloud services. One example is from the Cyberduck group called [duck.sh](https://duck.sh/). For more information on this, see the [Cyberduck wiki](https://trac.cyberduck.io/wiki/help/en/howto/cli).
