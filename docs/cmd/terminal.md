@@ -26,7 +26,7 @@ Windows, doesn't have a good default terminal available. Because of this, you wi
 !!! note
     There are terminal programs for Windows, including Cygwin and the WSL; however setting these up is outside of the scope of this tutorial. When getting started, it is easier to SSH to a server and get started there.
 
-# Remote server (SSH)
+# Remote server (via SSH)
 
 Connecting to a remote server has many advantages over using only your local computer.
 First, the amount of processing power and storage on remote server can be significantly greater
@@ -79,6 +79,12 @@ https://mobaxterm.mobatek.net/
 
 
 [^1]: Again, I'm intentionally ignoring things like WSL and Cygwin.
+
+### Security
+
+Regardless of the method you use to connect to a remote server, when you connect the first time to a server, the SSH software will likely ask you to confirm the server's identity. You will be presented with a signature (SHA256, MD5, etc) of the key that will look something like this: `ECDSA key fingerprint is SHA256:zC45ZzJRNzPYcjdS7dTHULo16Zl71g7sgm2fwC0ShGA`. These signatures are a security feature used to confirm that you're connecting to the server you expect and that no one else is listening into your connection. But, the first time you connect to a server, you may not know this information. If the remote server's administrator has given you these signatures, then you can compare that values you have to the ones you expect. But, if you don't have the signatures beforehand, you'll probably have to trust that the server is who they say they are. 
+
+If you are at all worried, ask the server's admin for help. The entire point of SSH is security (SSH stands for "secure shell"), so if you have any questions, you should ask the server's admin.
 
 ## Disconnecting
 

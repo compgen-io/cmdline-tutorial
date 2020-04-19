@@ -60,6 +60,11 @@ If you prefer a GUI program, one option is the [Cyberduck](https://cyberduck.io/
 
 For more information see here: https://cyberduck.io/
 
+### WinSCP (Windows)
+
+[WinSCP](https://winscp.net/) is a popular SFTP client for Windows. It has a pretty standard explorer interface where you can browse both your local computer and the remote server. This lets you copy files back and forth between them very easily. It is free to use.
+
+![WinSCP browser](img/winscp.png)
 
 ### MobaXterm (Windows)
 
