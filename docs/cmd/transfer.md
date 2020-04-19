@@ -4,7 +4,7 @@ Getting data onto a remote system and getting results back to your local compute
 
 ## Command-line programs
 
-For the below programs, `scp` and `sftp` should be already installed. If you are using Windows, there are command-line versions of these programs available as well, such as those supplied with PuTTY (although, they may have slightly different names). `rsync` is also installed by default on Macs, but you may need to install it separately if you are using a Linux client.
+For the below programs, `scp` and `sftp` should be already installed. If you are using Windows, there are command-line versions of these programs available as well, such as those supplied with PuTTY (although, they may have slightly different names). `rsync` is also installed by default on Macs, but you may need to install it separately if you are using a Linux client. `scp`, `sftp`, and `rsync` all work over the SSH protocol, so for any server that you can connect to via SSH, you can use these programs to transfer data.
 
 ### scp
 
@@ -47,7 +47,7 @@ If this looks the same as the `scp` instructions, that's because it is! However,
 
     rsync -avz --progress username@server1:dir/filename  username@server2:dest_dir/filename
 
-Here, we added the `-a`, `-v`, `-z` and `--progress` options. `-a` stands for "archive", which sync directories (recursively), permissions, dates, owner infromation, etc. Not all of these will translate to your local computer, but it is very useful when transfering files on the same server or between servers with the same user/group configurations. `-v` stands for "verbose". This will print out a bit more information about the transfer on the terminal for you to see how the transfer is progressing. `-z` enables zlib compression while you are transferring. This doesn't help if you are copying files on the same server, but can save a lot of bandwidth when copying to/from a remote server. Finally, the `--progress` option tells rsync to print out a progress meter for the current transfer. It isn't necessary, but it is a nice way to monitor the status of the current file's transmission.
+Here, we added the `-a`, `-v`, `-z` and `--progress` options. `-a` stands for "archive", which sync directories (recursively), permissions, dates, owner information, etc. Not all of these will translate to your local computer, but it is very useful when transferring files on the same server or between servers with the same user/group configurations. `-v` stands for "verbose". This will print out a bit more information about the transfer on the terminal for you to see how the transfer is progressing. `-z` enables zlib compression while you are transferring. This doesn't help if you are copying files on the same server, but can save a lot of bandwidth when copying to/from a remote server. Finally, the `--progress` option tells rsync to print out a progress meter for the current transfer. It isn't necessary, but it is a nice way to monitor the status of the current file's transmission.
 
 ### Downloading with HTTP/FTP
 
