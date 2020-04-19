@@ -82,9 +82,9 @@ https://mobaxterm.mobatek.net/
 
 ### Security
 
-Regardless of the method you use to connect to a remote server, when you connect the first time to a server, the SSH software will likely ask you to confirm the server's identity. You will be presented with a signature (SHA256, MD5, etc) of the key that will look something like this: `ECDSA key fingerprint is SHA256:zC45ZzJRNzPYcjdS7dTHULo16Zl71g7sgm2fwC0ShGA`. These signatures are a security feature used to confirm that you're connecting to the server you expect and that no one else is listening into your connection. But, the first time you connect to a server, you may not know this information. If the remote server's administrator has given you these signatures, then you can compare that values you have to the ones you expect. But, if you don't have the signatures beforehand, you'll probably have to trust that the server is who they say they are. 
+Regardless of the method you use to connect to a remote server, when you connect the first time to a server, the SSH software will likely ask you to confirm the server's identity. This is a normal prompt the first time you connect to a server. You will be presented with a signature (SHA256, MD5, etc) of the key that will look something like this: `ECDSA key fingerprint is SHA256:zC45ZzJRNzPYcjdS7dTHULo16Zl71g7sgm2fwC0ShGA`. These signatures are a security feature used to confirm that you're connecting to the server you expect and that no one else is listening into your connection. But, the first time you connect to a server, you may not know this information. If the remote server's administrator has given you these signatures, then you can compare that values you have to the ones you expect. But, if you don't have the signatures beforehand, you'll probably have to trust that the server is who they say they are.
 
-If you are at all worried, ask the server's admin for help. The entire point of SSH is security (SSH stands for "secure shell"), so if you have any questions, you should ask the server's admin.
+The entire point of SSH is security (SSH stands for "secure shell"), so if you have any questions, you should ask the server's admin.
 
 ## Disconnecting
 
