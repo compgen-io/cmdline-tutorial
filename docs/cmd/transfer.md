@@ -49,6 +49,16 @@ If this looks the same as the `scp` instructions, that's because it is! However,
 
 Here, we added the `-a`, `-v`, `-z` and `--progress` options. `-a` stands for "archive", which sync directories (recursively), permissions, dates, owner infromation, etc. Not all of these will translate to your local computer, but it is very useful when transfering files on the same server or between servers with the same user/group configurations. `-v` stands for "verbose". This will print out a bit more information about the transfer on the terminal for you to see how the transfer is progressing. `-z` enables zlib compression while you are transferring. This doesn't help if you are copying files on the same server, but can save a lot of bandwidth when copying to/from a remote server. Finally, the `--progress` option tells rsync to print out a progress meter for the current transfer. It isn't necessary, but it is a nice way to monitor the status of the current file's transmission.
 
+### Downloading with HTTP/FTP
+
+Another option you have to get data onto a server is to download it from a public web (HTTP) or FTP server. There are two primary tools that you can use at the command line to manage this: `curl` and `wget`. They are roughly equivalent for this purpose and pretty easy to use. The main benefit of using tools like this is that you have a great deal of visibility into the data transfer if/when things go wrong. For a simple download though, they are pretty easy to use. Below is an example of how to download a file using curl:
+
+	curl -LO https://example.com/test.dat
+
+In this example, the file you want to download is located at this URL: `https://example.com/test.dat`. The `-L` in the argument list tells curl to follow any redirection commands the server sends. Sometimes a server will redirect you to a different URL to download data. One common example is a redirection from a non-encrypted connection (HTTP) to an encrypted one (HTTPS). This is very common and happens transparently when you use a GUI web browser like Google Chrome or Firefox. Unfortunately, we have to explicitly tell curl to do the same. The `-O` argument tells curl to save the file as `test.dat` locally. By default, curl will send the data to [stdout](concepts.md#onputoutput-streams).
+
+
+
 ## GUI
 
 ### Cyberduck (macOS, Windows)
@@ -78,15 +88,6 @@ If you're using Windows, the MobaXterm program can be used to provide both SSH a
 There is also an option for data transfer when using an iPad or iPhone! You can use the program Secure ShellFish to link a remote server (using SSH/SFTP) to the iOS Files.app.
 
 ![Secure ShellFish](img/shellfish.png)
-
-## Downloading from websites
-
-Another option you have to get data onto a server is to download it from a public web or FTP server. There are two primary tools that you can use at the command line to manage this: `curl` and `wget`. They are roughly equivalent for this purpose and pretty easy to use. The main benefit of using tools like this is that you have a great deal of visibility into the data transfer if/when things go wrong. For a simple download though, they are pretty easy to use. Below is an example of how to download a file using curl:
-
-
-	curl -LO https://example.com/test.dat
-
-In this example, the file you want to download is located at this URL: `https://example.com/test.dat`. The `-L` in the argument list tells curl to follow any redirection commands the server sends. Sometimes a server will redirect you to a different URL to download data. One common example is a redirection from a non-encrypted connection (HTTP) to an encrypted one (HTTPS). This is very common and happens transparently when you use a GUI web browser like Google Chrome or Firefox. Unfortunately, we have to explicitly tell curl to do the same. The `-O` argument tells curl to save the file as `test.dat` locally. By default, curl will send the data to [stdout](concepts.md#onputoutput-streams).
 
 ## Cloud file sync services
 
